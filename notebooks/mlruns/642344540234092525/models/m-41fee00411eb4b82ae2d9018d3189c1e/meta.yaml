@@ -1,0 +1,10 @@
+artifact_location: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/642344540234092525/models/m-41fee00411eb4b82ae2d9018d3189c1e/artifacts
+creation_timestamp: 1753723073052
+experiment_id: '642344540234092525'
+last_updated_timestamp: 1753723084811
+model_id: m-41fee00411eb4b82ae2d9018d3189c1e
+model_type: null
+name: model
+source_run_id: cfed4f60f0ad4dbb860a36e1785b7430
+status: 2
+status_message: null

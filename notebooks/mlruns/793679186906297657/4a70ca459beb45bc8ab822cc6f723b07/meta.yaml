@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/793679186906297657/4a70ca459beb45bc8ab822cc6f723b07/artifacts
+end_time: 1753721983802
+entry_point_name: ''
+experiment_id: '793679186906297657'
+lifecycle_stage: active
+run_id: 4a70ca459beb45bc8ab822cc6f723b07
+run_name: grandiose-bear-930
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753721983790
+status: 4
+tags: []
+user_id: papamor

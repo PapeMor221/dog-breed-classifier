@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/642344540234092525/d433447ee2684d0088ffb8590c9c2efc/artifacts
+end_time: 1753721780411
+entry_point_name: ''
+experiment_id: '642344540234092525'
+lifecycle_stage: active
+run_id: d433447ee2684d0088ffb8590c9c2efc
+run_name: bittersweet-dog-320
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753721778805
+status: 4
+tags: []
+user_id: papamor

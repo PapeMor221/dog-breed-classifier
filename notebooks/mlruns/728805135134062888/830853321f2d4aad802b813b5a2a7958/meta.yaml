@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/728805135134062888/830853321f2d4aad802b813b5a2a7958/artifacts
+end_time: 1753721168271
+entry_point_name: ''
+experiment_id: '728805135134062888'
+lifecycle_stage: active
+run_id: 830853321f2d4aad802b813b5a2a7958
+run_name: honorable-grub-836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753721166283
+status: 4
+tags: []
+user_id: papamor
