@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/642344540234092525/cfed4f60f0ad4dbb860a36e1785b7430/artifacts
+end_time: 1753723084836
+entry_point_name: ''
+experiment_id: '642344540234092525'
+lifecycle_stage: active
+run_id: cfed4f60f0ad4dbb860a36e1785b7430
+run_name: orderly-stork-173
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753722786749
+status: 3
+tags: []
+user_id: papamor

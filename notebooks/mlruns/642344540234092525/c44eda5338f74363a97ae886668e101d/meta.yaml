@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/642344540234092525/c44eda5338f74363a97ae886668e101d/artifacts
+end_time: 1753722206142
+entry_point_name: ''
+experiment_id: '642344540234092525'
+lifecycle_stage: active
+run_id: c44eda5338f74363a97ae886668e101d
+run_name: rogue-mule-373
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753722204713
+status: 4
+tags: []
+user_id: papamor

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/642344540234092525/5b64c67a9b744972ab46dcd006e15f5f/artifacts
+end_time: 1753721751017
+entry_point_name: ''
+experiment_id: '642344540234092525'
+lifecycle_stage: active
+run_id: 5b64c67a9b744972ab46dcd006e15f5f
+run_name: puzzled-elk-936
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753721749778
+status: 4
+tags: []
+user_id: papamor

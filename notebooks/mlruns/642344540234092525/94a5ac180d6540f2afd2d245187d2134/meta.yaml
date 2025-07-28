@@ -1,0 +1,14 @@
+artifact_uri: file:///home/papamor/Documents/DIC%203/Projet-MLOPS/notebooks/mlruns/642344540234092525/94a5ac180d6540f2afd2d245187d2134/artifacts
+end_time: 1753722366511
+entry_point_name: ''
+experiment_id: '642344540234092525'
+lifecycle_stage: active
+run_id: 94a5ac180d6540f2afd2d245187d2134
+run_name: whimsical-vole-359
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753722365476
+status: 4
+tags: []
+user_id: papamor
