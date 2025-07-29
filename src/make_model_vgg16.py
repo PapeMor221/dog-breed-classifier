@@ -1,5 +1,3 @@
-# src/make_model_vgg16.py
-
 import os
 import sys
 import numpy as np
@@ -57,9 +55,10 @@ def create_vgg16_model(config):
     return model
 
 
-def train_vgg16_model(model, train_loader, val_loader, config):
+def train_vgg16_model(model, train_loader, val_loader, config, model_path="models/vgg16"):
     """
     Entraîne le modèle VGG16 sur les données fournies, avec affichage des métriques à chaque époque.
+    Sauvegarde localement le modèle après l'entraînement.
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
@@ -125,8 +124,13 @@ def train_vgg16_model(model, train_loader, val_loader, config):
               f"Rec: {metrics['recall']:.4f} | LogLoss: {metrics['log_loss']:.4f} | "
               f"AUC: {metrics['mean_roc_auc']:.4f}")
 
-        # Scheduler step
         scheduler.step(avg_val_loss)
+
+    # Sauvegarde locale
+    os.makedirs(model_path, exist_ok=True)
+    save_path = os.path.join(model_path, "vgg16_best.pth")
+    torch.save(model.state_dict(), save_path)
+    print(f"✅ Modèle VGG16 sauvegardé localement dans : {save_path}")
 
     return model
 
@@ -159,3 +163,14 @@ def test_model_vgg16(model, test_loader):
 
     metrics = eval_metrics(y_true, y_pred, y_pred_proba)
     return y_pred_proba, metrics
+
+
+def load_vgg16_model(config, model_path="models/vgg16/vgg16_best.pth"):
+    """
+    Charge un modèle VGG16 sauvegardé localement.
+    """
+    model = create_vgg16_model(config)
+    model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+    model.eval()
+    print(f"🔁 Modèle VGG16 chargé depuis : {model_path}")
+    return model

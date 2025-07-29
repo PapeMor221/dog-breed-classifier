@@ -44,10 +44,13 @@ def build_densenet_model(config, data, labels, input_shape=(128, 128, 3)):
     return model, x_train, x_val, x_test, y_train, y_val, y_test
 
 
-def train_densenet_model(model, config, x_train, y_train, x_val, y_val, model_path):
+def train_densenet_model(model, config, x_train, y_train, x_val, y_val, model_path="models/densenet"):
     """
-    Entraîne le modèle avec augmentation de données, sauvegarde le meilleur modèle.
+    Entraîne le modèle avec data augmentation et sauvegarde localement le meilleur modèle.
     """
+
+    # Créer le répertoire s’il n’existe pas
+    os.makedirs(model_path, exist_ok=True)
 
     # Callbacks
     anne = ReduceLROnPlateau(
@@ -57,7 +60,7 @@ def train_densenet_model(model, config, x_train, y_train, x_val, y_val, model_pa
         verbose=True,
         min_lr=config['min_lr']
     )
-    checkpoint_path = 'model_best.keras'
+    checkpoint_path = os.path.join(model_path, 'model_best.keras')
     checkpoint = ModelCheckpoint(checkpoint_path, save_best_only=True, verbose=1)
 
     # Data Augmentation
@@ -78,11 +81,8 @@ def train_densenet_model(model, config, x_train, y_train, x_val, y_val, model_pa
         verbose=2
     )
 
-    # Sauvegarde dans Google Drive
     if os.path.exists(checkpoint_path):
-        final_path = os.path.join(model_path, 'model_best.keras')
-        shutil.copy(checkpoint_path, final_path)
-        print(f"✅ Modèle sauvegardé dans Google Drive : {final_path}")
+        print(f"✅ Modèle sauvegardé localement à : {checkpoint_path}")
     else:
         print("❌ Modèle non trouvé après l'entraînement")
 

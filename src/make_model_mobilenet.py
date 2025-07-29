@@ -1,5 +1,6 @@
 # src/make_model_mobilenet.py
 
+import os
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.applications import MobileNetV2
@@ -128,10 +129,12 @@ def prepare_labels_for_mobilenetv2(labels):
 #         Train Model           #
 # ----------------------------- #
 
-def train_mobilenetv2_model(model, x_train, y_train, x_val, y_val, epochs, patience):
+def train_mobilenetv2_model(model, x_train, y_train, x_val, y_val, epochs, patience, model_path="models/mobilenetv2"):
     """
-    Entraîne le modèle MobileNetV2 avec EarlyStopping.
+    Entraîne le modèle MobileNetV2 avec EarlyStopping et sauvegarde localement.
     """
+    os.makedirs(model_path, exist_ok=True)
+
     y_train = prepare_labels_for_mobilenetv2(y_train)
     y_val = prepare_labels_for_mobilenetv2(y_val)
 
@@ -143,6 +146,11 @@ def train_mobilenetv2_model(model, x_train, y_train, x_val, y_val, epochs, patie
         validation_data=(x_val, y_val),
         callbacks=[early_stopping]
     )
+
+    # Sauvegarde du modèle après l'entraînement
+    model_save_path = os.path.join(model_path, "mobilenetv2_best.keras")
+    model.save(model_save_path)
+    print(f"✅ Modèle MobileNetV2 sauvegardé localement à : {model_save_path}")
 
     return history
 
@@ -169,3 +177,9 @@ def test_mobilenetv2_model(model, x_test, y_test, class_names):
         y_pred_proba.append(prediction[0])
 
     return results, np.array(y_pred_proba)
+
+
+#load model
+
+def load_mobilenetv2_model(model_path="models/mobilenetv2/mobilenetv2_best.keras"):
+    return tf.keras.models.load_model(model_path, compile=True)
