@@ -1,7 +1,7 @@
 # dog-breed-classifier
 
 ## Projet de Classification des Races de Chiens
-![Aperçu de l'application](https://github.com/Lemar00/dog-breed-classifier//assets/app_preview.png)
+![Aperçu de l'application](https://raw.githubusercontent.com/Lemar00/dog-breed-classifier/master/assets/app_preview.png)
 
 🎥 [Voir la Présentation sur Canva](https://www.canva.com/design/DAGumAs51Nk/vdb58vgVW66MYQJFVSMmwQ/edit?utm_content=DAGumAs51Nk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
