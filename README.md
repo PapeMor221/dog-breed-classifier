@@ -1,6 +1,9 @@
 # dog-breed-classifier
 
 ## Projet de Classification des Races de Chiens
+![Aperçu de l'application](https://raw.githubusercontent.com/Lemar00/dog-breed-classifier/tree/master/assets/app_preview.png)
+
+🎥 [Voir la Présentation sur Canva](https://www.canva.com/design/DAGumAs51Nk/vdb58vgVW66MYQJFVSMmwQ/edit?utm_content=DAGumAs51Nk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
 Ce repository contient un projet de classification de races de chiens à l'aide de modèles de Deep Learning. Le projet est structuré comme suit :
 

@@ -16,7 +16,7 @@ mkdir -p ${LOGS_DIR}
 echo "=========================== Start Dog classification training ==========================="
 
 # Exécution du notebook avec Papermill
-papermill notebooks/dog_predict.ipynb \
+papermill notebooks/dog_predict_colab.ipynb \
 "${LOGS_DIR}/${EXECUTION_DATE}-dog_predict-artifact.ipynb" \
 -k python39 --report-mode --log-output --no-progress-bar
 
