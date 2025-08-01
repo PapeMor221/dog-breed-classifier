@@ -2,7 +2,8 @@ fastapi
 uvicorn[standard]
 numpy
 pandas
-tensorflow
+tensorflow==2.15.0
+keras==2.15.0
 scikit-learn
 python-multipart
 pillow
